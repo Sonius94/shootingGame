@@ -86,11 +86,11 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="0MT-Yv-X5c">
             <objects>
-                <viewController id="kCK-hz-P9x" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aGH-Bo-hKY">
+                <viewController id="kCK-hz-P9x" customClass="GameViewController" customModule="shootemall" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aGH-Bo-hKY" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
