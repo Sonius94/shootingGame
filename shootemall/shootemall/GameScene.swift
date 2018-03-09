@@ -23,6 +23,14 @@ class GameScene: SKScene {
         bgNode.position = CGPoint(x: size.width * 0.5, y: size.height * 0.5)
         addChild(bgNode)
         
+        // Add a player
+        let player = SKSpriteNode()
+        player.color = UIColor.black
+        player.position = CGPoint(x: size.width * 0.5, y: size.height * 0.1)
+        player.size = CGSize(width: size.width*0.22, height: size.width*0.22)
+        addChild(player)
+        
+        // Add Score Label
         scoreLabel.fontSize = 36
         scoreLabel.fontColor = UIColor.black
         scoreLabel.text = "Kills: \(monstersDestroyed)"
