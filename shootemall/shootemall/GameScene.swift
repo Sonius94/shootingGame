@@ -30,12 +30,51 @@ class GameScene: SKScene {
         player.size = CGSize(width: size.width*0.22, height: size.width*0.22)
         addChild(player)
         
+        // Add Monsters running in
+        startMonsterRunning()
+        
         // Add Score Label
         scoreLabel.fontSize = 36
         scoreLabel.fontColor = UIColor.black
         scoreLabel.text = "Kills: \(monstersDestroyed)"
         scoreLabel.position = CGPoint(x: 4 + (scoreLabel.frame.width/2) , y: size.height * 0.9)
         addChild(scoreLabel)
+    }
+    
+    fileprivate func startMonsterRunning() {
+        let monsterAdding = SKAction.run(addMonster)
+        let waitingTime = SKAction.wait(forDuration:  1.0)
+        let sequence = SKAction.sequence([monsterAdding,waitingTime])
+        
+        run(sequence, completion: {
+            self.startMonsterRunning()
+        })
+    }
+    
+    fileprivate func addMonster() {
+        let monster = SKSpriteNode()
+        monster.color = UIColor.brown
+        monster.size = CGSize(width: size.width*0.14, height: size.width*0.14)
+        
+        let xPosition = random(min: monster.size.height/2, max: size.width - monster.size.height/2)
+        monster.position = CGPoint(x: xPosition, y: size.height + monster.size.width/2)
+        addChild(monster)
+        
+        let actionMove = SKAction.move(to: CGPoint(x: xPosition, y: -monster.size.height), duration: TimeInterval(4))
+        let actionMoveDone = SKAction.removeFromParent()
+        monster.run(SKAction.sequence([actionMove, actionMoveDone]))
+        
+    }
+}
+
+// Random math
+extension GameScene {
+    fileprivate func random() -> CGFloat {
+        return CGFloat(Float(arc4random()) / 0xFFFFFFFF)
+    }
+    
+    fileprivate func random(min: CGFloat, max: CGFloat) -> CGFloat {
+        return random() * (max - min) + min
     }
 }
 
