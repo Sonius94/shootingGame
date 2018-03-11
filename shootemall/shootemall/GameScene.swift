@@ -9,6 +9,7 @@
 import SpriteKit
 
 class GameScene: SKScene {
+    var player = SKSpriteNode()
     var scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
     var monstersDestroyed:Int = 0
     
@@ -24,7 +25,6 @@ class GameScene: SKScene {
         addChild(bgNode)
         
         // Add a player
-        let player = SKSpriteNode()
         player.color = UIColor.black
         player.position = CGPoint(x: size.width * 0.5, y: size.height * 0.1)
         player.size = CGSize(width: size.width*0.22, height: size.width*0.22)
@@ -64,6 +64,32 @@ class GameScene: SKScene {
         let actionMoveDone = SKAction.removeFromParent()
         monster.run(SKAction.sequence([actionMove, actionMoveDone]))
         
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first else { return }
+        let touchLocation = touch.location(in: self)
+        
+        let projectile = SKSpriteNode()
+        projectile.color = UIColor.yellow
+        projectile.size = CGSize(width: size.width*0.08, height: size.width*0.08)
+        projectile.position = player.position
+        
+        projectile.physicsBody = SKPhysicsBody(circleOfRadius: projectile.size.width/2)
+        projectile.physicsBody?.isDynamic = true
+        
+        let offset = touchLocation.substract(by: projectile.position)
+        if (offset.y < 0) { return }
+        
+        addChild(projectile)
+        
+        let direction = offset.normalized()
+        let shootAmount = direction.multiply(by: 1000)
+        let realDest = shootAmount.add(point: projectile.position)
+        
+        let actionMove = SKAction.move(to: realDest, duration: 2.0)
+        let actionMoveDone = SKAction.removeFromParent()
+        projectile.run(SKAction.sequence([actionMove, actionMoveDone]))
     }
 }
 

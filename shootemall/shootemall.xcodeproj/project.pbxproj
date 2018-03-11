@@ -17,6 +17,7 @@
 		54C528E22052DEEE006018D1 /* UIButton+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C528E12052DEEE006018D1 /* UIButton+Border.swift */; };
 		54C528E42052E474006018D1 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C528E32052E474006018D1 /* GameViewController.swift */; };
 		54C528E62052E64F006018D1 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C528E52052E64F006018D1 /* GameScene.swift */; };
+		54C528E820540FF9006018D1 /* CGPoint+Normalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C528E720540FF9006018D1 /* CGPoint+Normalization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		54C528E12052DEEE006018D1 /* UIButton+Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Border.swift"; sourceTree = "<group>"; };
 		54C528E32052E474006018D1 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		54C528E52052E64F006018D1 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		54C528E720540FF9006018D1 /* CGPoint+Normalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Normalization.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +112,9 @@
 				5492D4E9205129B300B1ACE6 /* Info.plist */,
 				54C528E52052E64F006018D1 /* GameScene.swift */,
 				54C528DF2052DE60006018D1 /* MenuViewController.swift */,
-				54C528E12052DEEE006018D1 /* UIButton+Border.swift */,
 				54C528E32052E474006018D1 /* GameViewController.swift */,
+				54C528E12052DEEE006018D1 /* UIButton+Border.swift */,
+				54C528E720540FF9006018D1 /* CGPoint+Normalization.swift */,
 			);
 			path = shootemall;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				54C528E42052E474006018D1 /* GameViewController.swift in Sources */,
 				54C528E02052DE60006018D1 /* MenuViewController.swift in Sources */,
 				54C528E22052DEEE006018D1 /* UIButton+Border.swift in Sources */,
+				54C528E820540FF9006018D1 /* CGPoint+Normalization.swift in Sources */,
 				5492D4DE205129B300B1ACE6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
