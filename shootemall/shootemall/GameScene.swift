@@ -99,7 +99,7 @@ extension GameScene {
 // MARK: Add Nodes to Scene
 extension GameScene {
     fileprivate func addBackgroundToScene() {
-        let bgNode = SKSpriteNode()
+        let bgNode = SKSpriteNode(imageNamed: "background1")
         bgNode.color = UIColor.red
         bgNode.zPosition = -1
         bgNode.size = size
@@ -108,7 +108,7 @@ extension GameScene {
     }
     
     fileprivate func addPlayerToScene() {
-        player.color = UIColor.black
+        player = SKSpriteNode(imageNamed: "player1")
         player.position = CGPoint(x: size.width * 0.5, y: size.height * 0.1)
         player.size = CGSize(width: size.width*0.22, height: size.width*0.22)
         addChild(player)
@@ -125,7 +125,7 @@ extension GameScene {
     }
     
     fileprivate func addEnemy() {
-        let enemy = SKSpriteNode()
+        let enemy = SKSpriteNode(imageNamed: "enemy1")
         enemy.color = UIColor.brown
         enemy.size = CGSize(width: size.width*0.14, height: size.width*0.14)
         
@@ -157,7 +157,7 @@ extension GameScene {
     }
     
     fileprivate func createProjectile() -> SKSpriteNode {
-        let projectile = SKSpriteNode()
+        let projectile = SKSpriteNode(imageNamed: "projectile1")
         projectile.color = UIColor.yellow
         projectile.size = CGSize(width: size.width*0.08, height: size.width*0.08)
         projectile.position = player.position
