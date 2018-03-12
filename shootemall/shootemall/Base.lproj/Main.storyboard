@@ -47,6 +47,9 @@
                                 <rect key="frame" x="117.5" y="422" width="139" height="45"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="26"/>
                                 <state key="normal" title="Highscore"/>
+                                <connections>
+                                    <segue destination="LSf-ul-rHf" kind="presentation" id="tfQ-W3-yus"/>
+                                </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mDx-YX-A46">
                                 <rect key="frame" x="0.0" y="86" width="375" height="145.5"/>
@@ -100,7 +103,55 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNC-mm-EFG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1096" y="142"/>
+            <point key="canvasLocation" x="1106" y="134"/>
+        </scene>
+        <!--Highscore View Controller-->
+        <scene sceneID="4QD-aJ-h8n">
+            <objects>
+                <viewController id="LSf-ul-rHf" customClass="HighscoreViewController" customModule="shootemall" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g98-Fl-IiS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Highscore:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QpF-tn-1Uc">
+                                <rect key="frame" x="63.5" y="20" width="248.5" height="35.5"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRB-1n-Bao">
+                                <rect key="frame" x="148.5" y="317.5" width="77.5" height="33"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvQ-Rd-cMy">
+                                <rect key="frame" x="8" y="14" width="30" height="48"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="28"/>
+                                <state key="normal" title="B"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="LSf-ul-rHf" eventType="touchUpInside" id="34v-P3-GVS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.27869796752929688" green="0.62974303960800171" blue="0.54860341548919678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QpF-tn-1Uc" firstAttribute="centerX" secondItem="g98-Fl-IiS" secondAttribute="centerX" id="1X7-kt-t6D"/>
+                            <constraint firstItem="JRB-1n-Bao" firstAttribute="centerY" secondItem="g98-Fl-IiS" secondAttribute="centerY" id="1mt-ho-b8f"/>
+                            <constraint firstItem="JRB-1n-Bao" firstAttribute="centerX" secondItem="g98-Fl-IiS" secondAttribute="centerX" id="3cg-62-Lcc"/>
+                            <constraint firstItem="qvQ-Rd-cMy" firstAttribute="leading" secondItem="00q-IF-N8Q" secondAttribute="leading" constant="8" id="9ch-mx-q9W"/>
+                            <constraint firstItem="QpF-tn-1Uc" firstAttribute="top" secondItem="00q-IF-N8Q" secondAttribute="top" id="Cvw-gN-aOt"/>
+                            <constraint firstItem="qvQ-Rd-cMy" firstAttribute="centerY" secondItem="QpF-tn-1Uc" secondAttribute="centerY" id="G31-JM-yzp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="00q-IF-N8Q"/>
+                    </view>
+                    <connections>
+                        <outlet property="scoreLabel" destination="JRB-1n-Bao" id="2Dg-2J-RAz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Etd-Xb-PkR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1105" y="907"/>
         </scene>
     </scenes>
 </document>

@@ -24,6 +24,10 @@ class MenuViewController: UIViewController {
     }
     
     func setScore(score: Int) {
+        let oldHighscore = UserDefaults.standard.integer(forKey: "highscore")
+        if score > oldHighscore {
+            UserDefaults.standard.set(score, forKey: "highscore")
+        }
         titleLabel.text = "Kills :\(score)"
     }
 }
