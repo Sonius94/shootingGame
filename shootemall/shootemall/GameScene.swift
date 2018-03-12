@@ -17,11 +17,12 @@ struct PhysicsCategory {
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     var player = SKSpriteNode()
+    var gameVC: GameViewController?
     var scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
     
     var enemiesDestroyed:Int = 0 {
         didSet {
-            scoreLabel.text = "Kills: \(monstersDestroyed)"
+            scoreLabel.text = "Kills: \(enemiesDestroyed)"
             if enemiesDestroyed == 10 {
                 scoreLabel.position = CGPoint(x: 4 + (scoreLabel.frame.width/2) , y: size.height * 0.9)
             } else if enemiesDestroyed == 100 {
@@ -140,7 +141,11 @@ extension GameScene {
         
         let actionMove = SKAction.move(to: CGPoint(x: xPosition, y: -enemy.size.height), duration: TimeInterval(4))
         let actionMoveDone = SKAction.removeFromParent()
-        enemy.run(SKAction.sequence([actionMove, actionMoveDone]))
+        let loseAction = SKAction.run() {
+            self.view?.presentScene(nil)
+            self.gameVC?.gameOver(score: self.enemiesDestroyed)
+        }
+        enemy.run(SKAction.sequence([actionMove, loseAction, actionMoveDone]))
     }
     
     fileprivate func addScoreLabelToScene() {

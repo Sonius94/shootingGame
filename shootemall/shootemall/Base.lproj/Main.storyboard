@@ -80,6 +80,7 @@
                         <outlet property="highscoreButton" destination="BqM-9E-C9Y" id="6Ma-Wr-48m"/>
                         <outlet property="newHighscoreLabel" destination="uMz-qj-75o" id="yES-gf-ZEo"/>
                         <outlet property="startGameButton" destination="g9r-AF-Wza" id="7gb-Wj-gSk"/>
+                        <outlet property="titleLabel" destination="lsW-bM-TDN" id="Shp-La-ObG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -10,6 +10,7 @@ import UIKit
 
 class MenuViewController: UIViewController {
     
+    @IBOutlet var titleLabel: UILabel!
     @IBOutlet var newHighscoreLabel: UILabel!
     @IBOutlet var startGameButton: UIButton!
     @IBOutlet var highscoreButton: UIButton!
@@ -20,5 +21,9 @@ class MenuViewController: UIViewController {
         newHighscoreLabel.alpha = 0
         startGameButton.setButtonBorder()
         highscoreButton.setButtonBorder()
+    }
+    
+    func setScore(score: Int) {
+        titleLabel.text = "Kills :\(score)"
     }
 }

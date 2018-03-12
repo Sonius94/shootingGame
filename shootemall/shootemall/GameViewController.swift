@@ -13,6 +13,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let scene = GameScene(size: view.bounds.size)
+        scene.gameVC = self
         
         let skView = view as! SKView
         skView.showsFPS = false
@@ -24,6 +25,13 @@ class GameViewController: UIViewController {
     
     override var prefersStatusBarHidden: Bool {
         return false
+    }
+    
+    func gameOver(score: Int) {
+        if let presenter = presentingViewController as? MenuViewController {
+            presenter.setScore(score: score)
+        }
+        dismiss(animated: true, completion: nil)
     }
 }
 
