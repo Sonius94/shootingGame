@@ -19,6 +19,8 @@
 		54C528E62052E64F006018D1 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C528E52052E64F006018D1 /* GameScene.swift */; };
 		54C528E820540FF9006018D1 /* CGPoint+Normalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C528E720540FF9006018D1 /* CGPoint+Normalization.swift */; };
 		54C528EA2056AD30006018D1 /* HighscoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C528E92056AD30006018D1 /* HighscoreViewController.swift */; };
+		54F401632063FF070060D83A /* WorldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F401622063FF070060D83A /* WorldTableViewCell.swift */; };
+		54F401652063FF600060D83A /* WorldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F401642063FF600060D83A /* WorldViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		54C528E52052E64F006018D1 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		54C528E720540FF9006018D1 /* CGPoint+Normalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Normalization.swift"; sourceTree = "<group>"; };
 		54C528E92056AD30006018D1 /* HighscoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighscoreViewController.swift; sourceTree = "<group>"; };
+		54F401622063FF070060D83A /* WorldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTableViewCell.swift; sourceTree = "<group>"; };
+		54F401642063FF600060D83A /* WorldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,8 @@
 				54C528E12052DEEE006018D1 /* UIButton+Border.swift */,
 				54C528E720540FF9006018D1 /* CGPoint+Normalization.swift */,
 				54C528E92056AD30006018D1 /* HighscoreViewController.swift */,
+				54F401622063FF070060D83A /* WorldTableViewCell.swift */,
+				54F401642063FF600060D83A /* WorldViewController.swift */,
 			);
 			path = shootemall;
 			sourceTree = "<group>";
@@ -280,6 +286,8 @@
 				54C528E22052DEEE006018D1 /* UIButton+Border.swift in Sources */,
 				54C528E820540FF9006018D1 /* CGPoint+Normalization.swift in Sources */,
 				5492D4DE205129B300B1ACE6 /* AppDelegate.swift in Sources */,
+				54F401652063FF600060D83A /* WorldViewController.swift in Sources */,
+				54F401632063FF070060D83A /* WorldTableViewCell.swift in Sources */,
 				54C528EA2056AD30006018D1 /* HighscoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

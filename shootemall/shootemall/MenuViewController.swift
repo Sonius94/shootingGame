@@ -14,6 +14,7 @@ class MenuViewController: UIViewController {
     @IBOutlet var newHighscoreLabel: UILabel!
     @IBOutlet var startGameButton: UIButton!
     @IBOutlet var highscoreButton: UIButton!
+    @IBOutlet var changeWorldButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -21,6 +22,7 @@ class MenuViewController: UIViewController {
         newHighscoreLabel.alpha = 0
         startGameButton.setButtonBorder()
         highscoreButton.setButtonBorder()
+        changeWorldButton.setButtonBorder()
     }
     
     func setScore(score: Int) {
