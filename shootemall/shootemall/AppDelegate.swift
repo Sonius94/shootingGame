@@ -15,9 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let defaults = UserDefaults.standard
-        let defaultValue = ["highscore" : 0] as [String : Any]
-        defaults.register(defaults: defaultValue)
+        setDefaultValues()
+        handleDependencyInjection()
+        
         return true
     }
 
@@ -42,7 +42,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+}
 
-
+extension AppDelegate {
+    fileprivate func setDefaultValues() {
+        let defaults = UserDefaults.standard
+        let defaultValue = ["highscore" : 0] as [String : Any]
+        defaults.register(defaults: defaultValue)
+    }
+    
+    fileprivate func handleDependencyInjection() {
+        let scenarioHandler = ScenarioHandler()
+        
+        if let firstViewController = window?.rootViewController as? MenuViewController {
+            firstViewController.scenarioHandler = scenarioHandler
+        }
+    }
 }
 
