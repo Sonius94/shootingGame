@@ -26,6 +26,10 @@ class ScenarioHandler {
         return enumCount(Scenario.self)
     }
     
+    /*
+     * Thanks to Matthieu Riegler
+     * https://stackoverflow.com/users/884123/matthieu-riegler
+     */
     fileprivate func enumCount<T: Hashable>(_: T.Type) -> Int {
         var i = 1
         while (withUnsafePointer(to: &i, {
@@ -46,9 +50,9 @@ enum Scenario {
         let desImage: UIImage?
         switch self {
         case .firstWorld:
-            desImage = UIImage(named: "defender_cat")!
+            desImage = UIImage(named: "background1")!
         case .secondWorld:
-            desImage = UIImage(named: "defender_dog")!
+            desImage = UIImage(named: "background2")!
         }
         guard desImage != nil else {
             return UIImage()
@@ -56,12 +60,12 @@ enum Scenario {
         return desImage!
     }
     
-    func getDescriptionLabel() -> String {
+    func getDescription() -> String {
         switch self {
         case .firstWorld:
-            return NSLocalizedString("CatWorldDescription", comment: "")
+            return NSLocalizedString("firstWorldDescription", comment: "")
         case .secondWorld:
-            return NSLocalizedString("DogWorldDescription", comment: "")
+            return NSLocalizedString("secondWorldDescription", comment: "")
         }
     }
 }

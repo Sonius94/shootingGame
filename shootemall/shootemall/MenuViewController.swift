@@ -16,6 +16,8 @@ class MenuViewController: UIViewController {
     @IBOutlet var highscoreButton: UIButton!
     @IBOutlet var changeWorldButton: UIButton!
     
+    var scenarioHandler: ScenarioHandler?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,5 +33,11 @@ class MenuViewController: UIViewController {
             UserDefaults.standard.set(score, forKey: "highscore")
         }
         titleLabel.text = "Kills :\(score)"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let worldController = segue.destination as? WorldViewController {
+            worldController.scenarioHandler = self.scenarioHandler
+        }
     }
 }

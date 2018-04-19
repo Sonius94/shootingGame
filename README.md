@@ -12,12 +12,11 @@ Add pictures for:
 
 # Upcoming features
 
-- Change between different worlds. Change player/enemies/background and projectiles
 - Add Background music. Logically turns off then you hear music with spotify etc.
 - Change difficulty. Have not just an easy mode. Play with enemies who get harder over time.
 - Adding in app purchases
 
 # About me
-Twitter: @Sonius94
-Steemit: @iamtom
-SteemitGER: @Sonius94
+- Twitter: @Sonius94
+- Steemit: @iamtom
+- SteemitGER: @Sonius94
