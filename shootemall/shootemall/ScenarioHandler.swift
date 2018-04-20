@@ -60,6 +60,50 @@ enum Scenario {
         return desImage!
     }
     
+    func getPlayerImageName() -> String {
+        var imageName: String = ""
+        switch self {
+        case .firstWorld:
+            imageName =  "player1"
+        case .secondWorld:
+            imageName = "player2"
+        }
+        return imageName
+    }
+    
+    func getProjectileImageName() -> String {
+        var imageName: String = ""
+        switch self {
+        case .firstWorld:
+            imageName =  "projectile1"
+        case .secondWorld:
+            imageName = "projectile2"
+        }
+        return imageName
+    }
+    
+    func getEnemyImageName() -> String {
+        var imageName: String = ""
+        switch self {
+        case .firstWorld:
+            imageName =  "enemy1"
+        case .secondWorld:
+            imageName = "enemy2"
+        }
+        return imageName
+    }
+    
+    func getBackgroundImageName() -> String {
+        var imageName: String = ""
+        switch self {
+        case .firstWorld:
+            imageName =  "background1"
+        case .secondWorld:
+            imageName = "background2"
+        }
+        return imageName
+    }
+    
     func getDescription() -> String {
         switch self {
         case .firstWorld:

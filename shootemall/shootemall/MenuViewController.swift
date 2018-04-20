@@ -39,5 +39,8 @@ class MenuViewController: UIViewController {
         if let worldController = segue.destination as? WorldViewController {
             worldController.scenarioHandler = self.scenarioHandler
         }
+        if let gameController = segue.destination as? GameViewController {
+            gameController.scenarioHandler = self.scenarioHandler
+        }
     }
 }

@@ -11,10 +11,17 @@ Add pictures for:
 - background1
 
 # Upcoming features
-
 - Add Background music. Logically turns off then you hear music with spotify etc.
 - Change difficulty. Have not just an easy mode. Play with enemies who get harder over time.
 - Adding in app purchases
+
+# Technology Stack
+- Language: Swift 4
+- IDE: Xcode 9.3
+- App is working on iOS 10+
+
+# How to contribute
+- You can fork it and create a pull request with new features or bug fixes.
 
 # About me
 - Twitter: @Sonius94
