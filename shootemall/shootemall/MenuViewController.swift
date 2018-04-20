@@ -14,9 +14,6 @@ class MenuViewController: UIViewController {
     @IBOutlet var newHighscoreLabel: UILabel!
     @IBOutlet var startGameButton: UIButton!
     @IBOutlet var highscoreButton: UIButton!
-    @IBOutlet var changeWorldButton: UIButton!
-    
-    var scenarioHandler: ScenarioHandler?
     
     
     override func viewDidLoad() {
@@ -24,7 +21,6 @@ class MenuViewController: UIViewController {
         newHighscoreLabel.alpha = 0
         startGameButton.setButtonBorder()
         highscoreButton.setButtonBorder()
-        changeWorldButton.setButtonBorder()
     }
     
     func setScore(score: Int) {
@@ -33,11 +29,5 @@ class MenuViewController: UIViewController {
             UserDefaults.standard.set(score, forKey: "highscore")
         }
         titleLabel.text = "Kills :\(score)"
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let worldController = segue.destination as? WorldViewController {
-            worldController.scenarioHandler = self.scenarioHandler
-        }
     }
 }
