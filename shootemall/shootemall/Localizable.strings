@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  shootemall
+
+  Created by Tom Kastek on 19.04.18.
+  Copyright © 2018 Sonius94. All rights reserved.
+*/
+
+"firstWorldDescription" = "This is the first world you can play";
+"secondWorldDescription" = "This is the second world you can play";

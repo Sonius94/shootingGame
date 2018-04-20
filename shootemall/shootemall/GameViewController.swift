@@ -10,10 +10,13 @@ import UIKit
 import SpriteKit
 
 class GameViewController: UIViewController {
+    var scenarioHandler: ScenarioHandler?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let scene = GameScene(size: view.bounds.size)
         scene.gameVC = self
+        scene.currentScenario = self.scenarioHandler?.currentScenario
         
         let skView = view as! SKView
         skView.showsFPS = false

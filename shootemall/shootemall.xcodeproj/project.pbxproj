@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		548875A02088DD8800BEFF54 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5488759F2088DD8800BEFF54 /* Localizable.strings */; };
 		5492D4DE205129B300B1ACE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492D4DD205129B300B1ACE6 /* AppDelegate.swift */; };
 		5492D4E3205129B300B1ACE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5492D4E1205129B300B1ACE6 /* Main.storyboard */; };
 		5492D4E5205129B300B1ACE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5492D4E4205129B300B1ACE6 /* Assets.xcassets */; };
@@ -19,6 +20,9 @@
 		54C528E62052E64F006018D1 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C528E52052E64F006018D1 /* GameScene.swift */; };
 		54C528E820540FF9006018D1 /* CGPoint+Normalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C528E720540FF9006018D1 /* CGPoint+Normalization.swift */; };
 		54C528EA2056AD30006018D1 /* HighscoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C528E92056AD30006018D1 /* HighscoreViewController.swift */; };
+		54F401632063FF070060D83A /* WorldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F401622063FF070060D83A /* WorldTableViewCell.swift */; };
+		54F401652063FF600060D83A /* WorldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F401642063FF600060D83A /* WorldViewController.swift */; };
+		54F40167206403950060D83A /* ScenarioHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F40166206403950060D83A /* ScenarioHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5488759F2088DD8800BEFF54 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		5492D4DA205129B300B1ACE6 /* shootemall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shootemall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5492D4DD205129B300B1ACE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5492D4E2205129B300B1ACE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,6 +62,9 @@
 		54C528E52052E64F006018D1 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		54C528E720540FF9006018D1 /* CGPoint+Normalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Normalization.swift"; sourceTree = "<group>"; };
 		54C528E92056AD30006018D1 /* HighscoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighscoreViewController.swift; sourceTree = "<group>"; };
+		54F401622063FF070060D83A /* WorldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTableViewCell.swift; sourceTree = "<group>"; };
+		54F401642063FF600060D83A /* WorldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldViewController.swift; sourceTree = "<group>"; };
+		54F40166206403950060D83A /* ScenarioHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +126,10 @@
 				54C528E12052DEEE006018D1 /* UIButton+Border.swift */,
 				54C528E720540FF9006018D1 /* CGPoint+Normalization.swift */,
 				54C528E92056AD30006018D1 /* HighscoreViewController.swift */,
+				54F401622063FF070060D83A /* WorldTableViewCell.swift */,
+				54F401642063FF600060D83A /* WorldViewController.swift */,
+				54F40166206403950060D83A /* ScenarioHandler.swift */,
+				5488759F2088DD8800BEFF54 /* Localizable.strings */,
 			);
 			path = shootemall;
 			sourceTree = "<group>";
@@ -203,7 +215,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = Sonius94;
 				TargetAttributes = {
 					5492D4D9205129B300B1ACE6 = {
@@ -248,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5492D4E8205129B300B1ACE6 /* LaunchScreen.storyboard in Resources */,
+				548875A02088DD8800BEFF54 /* Localizable.strings in Resources */,
 				5492D4E5205129B300B1ACE6 /* Assets.xcassets in Resources */,
 				5492D4E3205129B300B1ACE6 /* Main.storyboard in Resources */,
 			);
@@ -274,12 +287,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54F40167206403950060D83A /* ScenarioHandler.swift in Sources */,
 				54C528E62052E64F006018D1 /* GameScene.swift in Sources */,
 				54C528E42052E474006018D1 /* GameViewController.swift in Sources */,
 				54C528E02052DE60006018D1 /* MenuViewController.swift in Sources */,
 				54C528E22052DEEE006018D1 /* UIButton+Border.swift in Sources */,
 				54C528E820540FF9006018D1 /* CGPoint+Normalization.swift in Sources */,
 				5492D4DE205129B300B1ACE6 /* AppDelegate.swift in Sources */,
+				54F401652063FF600060D83A /* WorldViewController.swift in Sources */,
+				54F401632063FF070060D83A /* WorldTableViewCell.swift in Sources */,
 				54C528EA2056AD30006018D1 /* HighscoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,6 +365,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -356,6 +373,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -406,6 +424,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -413,6 +432,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
